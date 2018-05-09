@@ -78,7 +78,7 @@
 		"categories": [ "example.Commander" ],
 		"name": "Commander"
 	}, {
-		"categories": [ "Common.groundUnits" ],
+		"categories": [],
 		"name": "Followers"
 	} ],
 	"root": {
