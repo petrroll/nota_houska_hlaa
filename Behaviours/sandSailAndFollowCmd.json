@@ -30,33 +30,47 @@
 			"x": 724,
 			"y": 94
 		},
+		"ZnD9LPmYS4JC5DAbShsVlr6R9KxJ2mEp": {
+			"height": 70,
+			"title": "moveFormation",
+			"width": 213,
+			"x": 719,
+			"y": 372
+		},
 		"e3ScmuIdpprwdt2LmFMRhEjsZczz7xGR": {
 			"height": 94,
 			"title": "storeWndData",
 			"width": 184,
-			"x": 719,
-			"y": -206
+			"x": 723,
+			"y": -286
 		},
 		"e8mAJQ5wHmcEyLPZQdDu9jpIyNtAa0VH": {
 			"height": 112,
 			"title": "moveInFormationAroundCmd (+70 to move the centre of the formation on the cmd)",
 			"width": 610,
-			"x": 715,
-			"y": 347
+			"x": 978,
+			"y": 315
 		},
 		"gW7GXKab2eyLuRP7QZEN4gOxkuDXy3ZC": {
 			"height": 94,
 			"title": "storeCmdPosition",
 			"width": 202,
-			"x": 718,
-			"y": -295
+			"x": 720,
+			"y": -380
 		},
 		"hjHsTBGGvgSiT89cfm6D8Vu5oTIUQwoE": {
 			"height": 94,
 			"title": "storeCmdFuturePosAccordingToWind",
-			"width": 617,
+			"width": 678,
 			"x": 721,
 			"y": -108
+		},
+		"m29xUp1t0Xlfps22FGNTfO8GYpCN65Gf": {
+			"height": 94,
+			"title": "storeWindVec",
+			"width": 366,
+			"x": 724,
+			"y": -195
 		},
 		"ncTBOeXZrkDeo5GOfc8RKrZNyIHpxYYh": {
 			"height": 60,
@@ -71,6 +85,13 @@
 			"width": 713,
 			"x": 716,
 			"y": 199
+		},
+		"v8JkxDaGNYOPLA3YoGGYMaJ04ehkDSDH": {
+			"height": 72,
+			"title": "waitAndFinishFomationMoveIfStuck",
+			"width": 307,
+			"x": 982,
+			"y": 473
 		},
 		"zr18yKfxImF0JswWea3t6HBXvfJVFb5z": {
 			"height": 112,
@@ -121,6 +142,21 @@
 				"scriptName": "store"
 			}, {
 				"children": [],
+				"id": "m29xUp1t0Xlfps22FGNTfO8GYpCN65Gf",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "windVec"
+				}, {
+					"name": "value",
+					"value": " Vec3(wndData.dirX*10, 0, wndData.dirZ*10)"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [],
 				"id": "hjHsTBGGvgSiT89cfm6D8Vu5oTIUQwoE",
 				"nodeType": "luaCommand",
 				"parameters": [ {
@@ -128,7 +164,7 @@
 					"value": "futCmdPos"
 				}, {
 					"name": "value",
-					"value": "Vec3(cmdPos[\"x\"] +  wndData.dirX*10, cmdPos[\"y\"], cmdPos[\"z\"]+wndData.dirZ*10)"
+					"value": "cmdPos + windVec"
 				}, {
 					"name": "scriptName",
 					"value": "store"
@@ -143,7 +179,7 @@
 					"value": "cmdPos"
 				}, {
 					"name": "relativeVector",
-					"value": "Vec3(wndData.dirX*10, 0, wndData.dirZ*10)"
+					"value": "windVec"
 				}, {
 					"name": "lineId",
 					"value": 1
@@ -158,7 +194,7 @@
 				"nodeType": "luaCommand",
 				"parameters": [ {
 					"name": "pos",
-					"value": "{x = futCmdPos[\"x\"], z = futCmdPos[\"z\"]}"
+					"value": "futCmdPos"
 				}, {
 					"name": "fight",
 					"value": "false"
@@ -188,23 +224,39 @@
 				} ],
 				"scriptName": "store"
 			}, {
-				"children": [],
-				"id": "e8mAJQ5wHmcEyLPZQdDu9jpIyNtAa0VH",
-				"nodeType": "luaCommand",
-				"parameters": [ {
-					"name": "position",
-					"value": "futCmdPos + Vec3(0,0,70)"
+				"children": [ {
+					"children": [],
+					"id": "e8mAJQ5wHmcEyLPZQdDu9jpIyNtAa0VH",
+					"nodeType": "luaCommand",
+					"parameters": [ {
+						"name": "position",
+						"value": "futCmdPos + Vec3(0,0,70)"
+					}, {
+						"name": "formation",
+						"value": "followersFormation"
+					}, {
+						"name": "fight",
+						"value": "false"
+					}, {
+						"name": "scriptName",
+						"value": "formation.move"
+					} ],
+					"scriptName": "formation.move"
 				}, {
-					"name": "formation",
-					"value": "followersFormation"
-				}, {
-					"name": "fight",
-					"value": "false"
-				}, {
-					"name": "scriptName",
-					"value": "formation.move"
+					"children": [],
+					"id": "v8JkxDaGNYOPLA3YoGGYMaJ04ehkDSDH",
+					"nodeType": "wait",
+					"parameters": [ {
+						"name": "time",
+						"value": 5
+					} ]
 				} ],
-				"scriptName": "formation.move"
+				"id": "ZnD9LPmYS4JC5DAbShsVlr6R9KxJ2mEp",
+				"nodeType": "parallel",
+				"parameters": [ {
+					"name": "mode",
+					"value": "any-success"
+				} ]
 			} ],
 			"id": "1DUgVHEJ3PoUH203VgYqxVSiZZcbbd1E",
 			"nodeType": "sequence",
