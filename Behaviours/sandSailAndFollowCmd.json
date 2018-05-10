@@ -73,7 +73,7 @@
 			"y": 199
 		},
 		"zr18yKfxImF0JswWea3t6HBXvfJVFb5z": {
-			"height": 94,
+			"height": 112,
 			"title": "connectToDrawDebugInfo (requires 'exampleDebug_update')",
 			"width": 471,
 			"x": 717,
@@ -144,6 +144,9 @@
 				}, {
 					"name": "relativeVector",
 					"value": "Vec3(wndData.dirX*10, 0, wndData.dirZ*10)"
+				}, {
+					"name": "lineId",
+					"value": 1
 				}, {
 					"name": "scriptName",
 					"value": "nota_houska_hlaa.drawRelative"
