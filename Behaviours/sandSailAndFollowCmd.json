@@ -1,20 +1,5 @@
 {
-	"additionalNodes": [ {
-		"children": [],
-		"id": "s6PkfmGygWTtMogP2MJ0opWTZJ3PF5ge",
-		"nodeType": "luaCommand",
-		"parameters": [ {
-			"name": "pos",
-			"value": "{x = futCmdPos[\"x\"], z = futCmdPos[\"z\"]}"
-		}, {
-			"name": "fight",
-			"value": "false"
-		}, {
-			"name": "scriptName",
-			"value": "Common.move"
-		} ],
-		"scriptName": "Common.move"
-	} ],
+	"additionalNodes": [],
 	"additionalParameters": {
 		"root": {
 			"height": 88,
@@ -54,7 +39,7 @@
 		},
 		"e8mAJQ5wHmcEyLPZQdDu9jpIyNtAa0VH": {
 			"height": 112,
-			"title": "moveInFormationAroundCmd (+50 to move the centre of the formation on the cmd)",
+			"title": "moveInFormationAroundCmd (+70 to move the centre of the formation on the cmd)",
 			"width": 610,
 			"x": 715,
 			"y": 347
@@ -79,13 +64,6 @@
 			"width": 143,
 			"x": 492,
 			"y": 10
-		},
-		"s6PkfmGygWTtMogP2MJ0opWTZJ3PF5ge": {
-			"height": 90,
-			"title": "moveAccordingToWind ",
-			"width": 568,
-			"x": -88,
-			"y": 215
 		},
 		"sm4SvpabADv4WJ5goDDYRtnX90aU5GfG": {
 			"height": 94,
@@ -200,7 +178,7 @@
 					"value": "followersFormation"
 				}, {
 					"name": "value",
-					"value": "formation.StaticTransform(formation.Definition(\"wedge\").positions, 0, nil, Vec3(75, 1, 75))"
+					"value": "formation.StaticTransform(formation.Definition(\"wedge\").positions, 0, nil, Vec3(75, 1, 80))"
 				}, {
 					"name": "scriptName",
 					"value": "store"
@@ -212,7 +190,7 @@
 				"nodeType": "luaCommand",
 				"parameters": [ {
 					"name": "position",
-					"value": "futCmdPos + Vec3(0,0,50)"
+					"value": "futCmdPos + Vec3(0,0,70)"
 				}, {
 					"name": "formation",
 					"value": "followersFormation"
