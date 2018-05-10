@@ -1,5 +1,20 @@
 {
-	"additionalNodes": [],
+	"additionalNodes": [ {
+		"children": [],
+		"id": "s6PkfmGygWTtMogP2MJ0opWTZJ3PF5ge",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "pos",
+			"value": "{x = futCmdPos[\"x\"], z = futCmdPos[\"z\"]}"
+		}, {
+			"name": "fight",
+			"value": "false"
+		}, {
+			"name": "scriptName",
+			"value": "Common.move"
+		} ],
+		"scriptName": "Common.move"
+	} ],
 	"additionalParameters": {
 		"root": {
 			"height": 88,
@@ -23,12 +38,12 @@
 			"x": 248,
 			"y": 6
 		},
-		"N88ZLdsRgIgETYHXhqRQDIzbWFsVf39j": {
-			"height": 94,
-			"title": "showWindDir(connectToDebug, expects 'exampleDebug_update')",
-			"width": 555,
-			"x": 726,
-			"y": 3
+		"HJPvxR8AGtjEdGnJGaWSepoJFYkdPigN": {
+			"height": 90,
+			"title": "moveCmdAccordingToWind",
+			"width": 328,
+			"x": 724,
+			"y": 94
 		},
 		"e3ScmuIdpprwdt2LmFMRhEjsZczz7xGR": {
 			"height": 94,
@@ -69,8 +84,8 @@
 			"height": 90,
 			"title": "moveAccordingToWind ",
 			"width": 568,
-			"x": 725,
-			"y": 107
+			"x": -88,
+			"y": 215
 		},
 		"sm4SvpabADv4WJ5goDDYRtnX90aU5GfG": {
 			"height": 94,
@@ -78,6 +93,13 @@
 			"width": 713,
 			"x": 716,
 			"y": 199
+		},
+		"zr18yKfxImF0JswWea3t6HBXvfJVFb5z": {
+			"height": 94,
+			"title": "connectToDrawDebugInfo (requires 'exampleDebug_update')",
+			"width": 471,
+			"x": 717,
+			"y": -7
 		}
 	},
 	"roles": [ {
@@ -136,22 +158,22 @@
 				"scriptName": "store"
 			}, {
 				"children": [],
-				"id": "N88ZLdsRgIgETYHXhqRQDIzbWFsVf39j",
+				"id": "zr18yKfxImF0JswWea3t6HBXvfJVFb5z",
 				"nodeType": "luaCommand",
 				"parameters": [ {
-					"name": "var",
-					"value": "x"
+					"name": "position",
+					"value": "cmdPos"
 				}, {
-					"name": "value",
-					"value": "nota_houska_hlaa.DebugRelativeLine(wndData.dirX*10, wndData.dirZ*10)"
+					"name": "relativeVector",
+					"value": "Vec3(wndData.dirX*10, 0, wndData.dirZ*10)"
 				}, {
 					"name": "scriptName",
-					"value": "store"
+					"value": "nota_houska_hlaa.drawRelative"
 				} ],
-				"scriptName": "store"
+				"scriptName": "nota_houska_hlaa.drawRelative"
 			}, {
 				"children": [],
-				"id": "s6PkfmGygWTtMogP2MJ0opWTZJ3PF5ge",
+				"id": "HJPvxR8AGtjEdGnJGaWSepoJFYkdPigN",
 				"nodeType": "luaCommand",
 				"parameters": [ {
 					"name": "pos",
