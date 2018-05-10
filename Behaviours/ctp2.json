@@ -1,0 +1,192 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 88,
+			"width": 180
+		}
+	},
+	"inputs": [],
+	"outputs": [],
+	"properties": {
+		"9w5n2iLnVlEmYlAxTShbnJi0fYcJTr2W": {
+			"height": 94,
+			"title": "storeEnemyInfo",
+			"width": 302,
+			"x": 818,
+			"y": -211
+		},
+		"MKjn6WFmh2s5X7JQrhNCobt29q6WcgIu": {
+			"height": 92,
+			"title": "drawHillCandidates",
+			"width": 315,
+			"x": 819,
+			"y": -14
+		},
+		"RbnmK26UDX8WE0itPlYpXFmQfnyQx9BK": {
+			"height": 60,
+			"title": "runSequence",
+			"width": 166,
+			"x": 352,
+			"y": 415
+		},
+		"U4STah7z2yNpOzS1BKvgtlU71x83k86J": {
+			"height": 92,
+			"title": "drawHills",
+			"width": 315,
+			"x": 819,
+			"y": 190
+		},
+		"dJlItFDMNaO8rZr3bB8XjTIJ0qnxK9HD": {
+			"height": 60,
+			"title": "initSequenceRunsJustOnce",
+			"width": 256,
+			"x": 511,
+			"y": -109
+		},
+		"gOEOGphJYA5nfqK0RSfU0KjWwCnGfU0D": {
+			"height": 94,
+			"title": "filterAndStoreUniqueHills",
+			"width": 421,
+			"x": 819,
+			"y": 86
+		},
+		"lC73bCgKzqdlZO5pClL210wsdwxk6Plx": {
+			"height": 90,
+			"title": "initOrNormalRunSelector",
+			"width": 239,
+			"x": 220,
+			"y": -1
+		},
+		"neqQ9sIpcNSg7aNekXEha6o2MuUo55wm": {
+			"height": 92,
+			"title": "setInitedToTrue",
+			"width": 195,
+			"x": 818,
+			"y": -310
+		},
+		"yb4VVwu1hWkBbFELNq87EGMluNdHnhi2": {
+			"height": 94,
+			"title": "storeHillCandidates",
+			"width": 367,
+			"x": 818,
+			"y": -110
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [ {
+				"children": [],
+				"id": "neqQ9sIpcNSg7aNekXEha6o2MuUo55wm",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "inited"
+				}, {
+					"name": "value",
+					"value": "true"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [],
+				"id": "9w5n2iLnVlEmYlAxTShbnJi0fYcJTr2W",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "enemyInfo"
+				}, {
+					"name": "value",
+					"value": "core.MissionInfo().enemyPositions"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [],
+				"id": "yb4VVwu1hWkBbFELNq87EGMluNdHnhi2",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "hillCand"
+				}, {
+					"name": "value",
+					"value": "nota_houska_hlaa.HillCandidates()"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [],
+				"id": "MKjn6WFmh2s5X7JQrhNCobt29q6WcgIu",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "locations",
+					"value": "hillCand"
+				}, {
+					"name": "linesBaseId",
+					"value": 2
+				}, {
+					"name": "scriptName",
+					"value": "nota_houska_hlaa.drawMarksAtLocs"
+				} ],
+				"scriptName": "nota_houska_hlaa.drawMarksAtLocs"
+			}, {
+				"children": [],
+				"id": "gOEOGphJYA5nfqK0RSfU0KjWwCnGfU0D",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "selectedHills"
+				}, {
+					"name": "value",
+					"value": "nota_houska_hlaa.AggregatePositions(hillCand, 512)"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [],
+				"id": "U4STah7z2yNpOzS1BKvgtlU71x83k86J",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "locations",
+					"value": "selectedHills"
+				}, {
+					"name": "linesBaseId",
+					"value": 500
+				}, {
+					"name": "scriptName",
+					"value": "nota_houska_hlaa.drawMarksAtLocs"
+				} ],
+				"scriptName": "nota_houska_hlaa.drawMarksAtLocs"
+			} ],
+			"id": "dJlItFDMNaO8rZr3bB8XjTIJ0qnxK9HD",
+			"nodeType": "sequence",
+			"parameters": []
+		}, {
+			"children": [],
+			"id": "RbnmK26UDX8WE0itPlYpXFmQfnyQx9BK",
+			"nodeType": "sequence",
+			"parameters": []
+		} ],
+		"id": "lC73bCgKzqdlZO5pClL210wsdwxk6Plx",
+		"nodeType": "luaCondition",
+		"parameters": [ {
+			"name": "expression",
+			"value": "inited == nil"
+		}, {
+			"name": "repeat",
+			"value": "false"
+		} ]
+	}
+}
