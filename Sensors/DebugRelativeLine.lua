@@ -1,6 +1,6 @@
 local sensorInfo = {
 	name = "DrawRelativeLine",
-	desc = "Draws a uni-realative debug line",
+	desc = "Draws a uni-realative debug line, expects 'exampleDebug_update' widget",
 	author = "Petrroll",
 	date = "2018-05-18",
 	license = "MIT",
@@ -21,23 +21,21 @@ function getInfo()
 	}
 end
 
--- @description return current wind statistics
+-- @description draws line relative to the first unit using 'exampleDebug_update' widget
 return function(relX, relZ)
 	if #units > 0 then
 		local unitID = units[1]
 		local x,y,z = Spring.GetUnitPosition(unitID)
+		local linePos = {	-- data
+			startPos = Vec3(x,y,z), 
+			endPos = Vec3(x,y,z) + Vec3(relX,0,relZ)
+		}
 		if (Script.LuaUI('exampleDebug_update')) then
 			Script.LuaUI.exampleDebug_update(
 				unitID, -- key
-				{	-- data
-					startPos = Vec3(x,y,z), 
-					endPos = Vec3(x,y,z) + Vec3(relX,0,relZ)
-				}
+				linePos -- data
 			)
 		end
-		return {	-- data
-					startPos = Vec3(x,y,z), 
-					endPos = Vec3(x,y,z) + Vec3(relX,0,relZ)
-				}
+		return linePos
 	end
 end
