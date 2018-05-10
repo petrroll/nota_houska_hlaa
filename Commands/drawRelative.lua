@@ -15,20 +15,26 @@ function getInfo()
 				componentType = "editBox",
 				defaultValue = "Vec3(1, 0, 1)",
 			},
+			{ 
+				name = "lineId",
+				variableType = "number",
+				componentType = "editBox",
+				defaultValue = "1",
+			},
 		}
 	}
 end
 
 -- Requires exampleDebug_update function for the drawing itself. 
 function Run(self, units, parameter)
-	local unitID = units[1]
+	local lineId = parameter.lineId
 	local linePos = {	-- data
 		startPos = parameter.position, 
 		endPos = parameter.position + parameter.relativeVector
 	}
 	if (Script.LuaUI('exampleDebug_update')) then
 	Script.LuaUI.exampleDebug_update(
-		unitID, -- key
+		lineId, -- key
 		linePos -- data
 	)
 	end

@@ -9,6 +9,12 @@ function getInfo()
 				componentType = "editBox",
 				defaultValue = "",
 			},
+			{ 
+				name = "linesBaseId",
+				variableType = "number",
+				componentType = "editBox",
+				defaultValue = "1",
+			},
 		}
 	}
 end
@@ -16,7 +22,7 @@ end
 
 -- Requires exampleDebug_update function for the drawing itself. 
 function Run(self, units, parameter)
-	local idBase = units[1]
+	local idBase = parameter.linesBaseId
 	for id, loc in pairs(parameter.locations) do
 		local linePos = {	-- data
 			startPos = loc - Vec3(5, 0, 0), 
