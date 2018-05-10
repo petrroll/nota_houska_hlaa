@@ -1,7 +1,7 @@
 function getInfo()
 	return {
 		onNoUnits = SUCCESS, -- instant success
-		tooltip = "Draws line relative to position",
+		tooltip = "Draws a line relative to a specified position.",
 		parameterDefs = {
 			{ 
 				name = "position",
@@ -19,6 +19,7 @@ function getInfo()
 	}
 end
 
+-- Requires exampleDebug_update function for the drawing itself. 
 function Run(self, units, parameter)
 	local unitID = units[1]
 	local linePos = {	-- data
