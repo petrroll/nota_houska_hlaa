@@ -1,0 +1,52 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 148,
+			"width": 216
+		}
+	},
+	"inputs": [ {
+		"command": "Variable",
+		"name": "group"
+	}, {
+		"command": "Variable",
+		"name": "position"
+	} ],
+	"outputs": [],
+	"properties": {
+		"ws3W7NtN626BrWL0GhGa3gKkTNxJWdmB": {
+			"height": 132,
+			"title": "formation.moveCustomGroup",
+			"width": 676,
+			"x": 258,
+			"y": 6
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [],
+		"id": "ws3W7NtN626BrWL0GhGa3gKkTNxJWdmB",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "groupDefintion",
+			"value": "nota_houska_hlaa.SwitchKeysAndValues(group)"
+		}, {
+			"name": "position",
+			"value": "position"
+		}, {
+			"name": "formation",
+			"value": "formation.Definition(\"swarm\").positions"
+		}, {
+			"name": "fight",
+			"value": "false"
+		}, {
+			"name": "scriptName",
+			"value": "formation.moveCustomGroup"
+		} ],
+		"scriptName": "formation.moveCustomGroup"
+	}
+}
