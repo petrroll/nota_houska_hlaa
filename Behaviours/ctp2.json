@@ -13,22 +13,22 @@
 			"height": 151,
 			"title": "reference",
 			"width": 340,
-			"x": 1026,
-			"y": 438
+			"x": 1104,
+			"y": 1090
 		},
 		"40SfAs7cIz6PsjCfFT4ClIMV7gs9d6a3": {
 			"height": 72,
 			"title": "waitUntilMissionEnd",
 			"width": 208,
-			"x": 781,
-			"y": 558
+			"x": 769,
+			"y": 1116
 		},
 		"8a1IWsCRDaywjR7jgODkwpSY1VhBeJ4e": {
 			"height": 151,
 			"title": "reference",
 			"width": 340,
-			"x": 1029,
-			"y": 587
+			"x": 1095,
+			"y": 1231
 		},
 		"9w5n2iLnVlEmYlAxTShbnJi0fYcJTr2W": {
 			"height": 94,
@@ -37,12 +37,26 @@
 			"x": 807,
 			"y": -211
 		},
+		"Dw8M44vlyvX99tSRIV7fPaaWpB3RCqlk": {
+			"height": 92,
+			"title": "storeWarriorsIds",
+			"width": 186,
+			"x": 1050,
+			"y": 285
+		},
 		"LDsDJ8BpqxMzkTsdzuw4X6qX1Gh6eaDd": {
 			"height": 94,
 			"title": "storeMissionInfo",
 			"width": 198,
 			"x": 812,
 			"y": -300
+		},
+		"LOQ8IfiafyEzMbF8gVw5jAxZ992hHTTQ": {
+			"height": 92,
+			"title": "storeTransporterId",
+			"width": 201,
+			"x": 1048,
+			"y": 374
 		},
 		"MKjn6WFmh2s5X7JQrhNCobt29q6WcgIu": {
 			"height": 92,
@@ -51,18 +65,25 @@
 			"x": 808,
 			"y": -14
 		},
+		"NKI4JtFlf7nPCUnsxu2L73Kj26a1bgpR": {
+			"height": 92,
+			"title": "unloadUnitsOnEnemyTower",
+			"width": 257,
+			"x": 815,
+			"y": 579
+		},
 		"Pg0RV2Ic1WROZrjX7c6MC2TGKjIyddom": {
 			"height": 70,
 			"title": "parallel",
 			"width": 202,
-			"x": 787,
-			"y": 443
+			"x": 828,
+			"y": 810
 		},
 		"RbnmK26UDX8WE0itPlYpXFmQfnyQx9BK": {
 			"height": 60,
 			"title": "runSequence",
 			"width": 166,
-			"x": 566,
+			"x": 567,
 			"y": 378
 		},
 		"U4STah7z2yNpOzS1BKvgtlU71x83k86J": {
@@ -76,15 +97,15 @@
 			"height": 60,
 			"title": "initSequenceRunsJustOnce",
 			"width": 256,
-			"x": 511,
+			"x": 512,
 			"y": -109
 		},
 		"egi5Wx79rnK6dQ5mXdKrvpbI5fHsGL64": {
 			"height": 151,
 			"title": "reference",
 			"width": 340,
-			"x": 1030,
-			"y": 889
+			"x": 1092,
+			"y": 1531
 		},
 		"gOEOGphJYA5nfqK0RSfU0KjWwCnGfU0D": {
 			"height": 94,
@@ -97,22 +118,22 @@
 			"height": 151,
 			"title": "reference",
 			"width": 340,
-			"x": 1029,
-			"y": 738
+			"x": 1093,
+			"y": 1384
 		},
 		"lC73bCgKzqdlZO5pClL210wsdwxk6Plx": {
 			"height": 90,
 			"title": "initOrNormalRunSelector",
 			"width": 239,
-			"x": 221,
+			"x": 222,
 			"y": -1
 		},
 		"llxf84Qlfor2344ygdRo6HqTADcFBZZG": {
 			"height": 70,
 			"title": "filterOnlyWarriors",
 			"width": 202,
-			"x": 813,
-			"y": 321
+			"x": 793,
+			"y": 292
 		},
 		"neqQ9sIpcNSg7aNekXEha6o2MuUo55wm": {
 			"height": 92,
@@ -125,8 +146,15 @@
 			"height": 94,
 			"title": "storeDividedUnits",
 			"width": 444,
-			"x": 1083,
-			"y": 313
+			"x": 825,
+			"y": 689
+		},
+		"wwd6WS5RB3qqMOxm45OjofxXA9d0uowx": {
+			"height": 92,
+			"title": "loadUnitsToTransporter",
+			"width": 241,
+			"x": 814,
+			"y": 479
 		},
 		"yb4VVwu1hWkBbFELNq87EGMluNdHnhi2": {
 			"height": 94,
@@ -258,14 +286,29 @@
 			"children": [ {
 				"children": [ {
 					"children": [],
-					"id": "wXBAYelfJDwoMntIwtU6Dh7ach83YcXv",
+					"id": "Dw8M44vlyvX99tSRIV7fPaaWpB3RCqlk",
 					"nodeType": "luaCommand",
 					"parameters": [ {
 						"name": "var",
-						"value": "groups"
+						"value": "warriors"
 					}, {
 						"name": "value",
-						"value": "nota_houska_hlaa.DivideUnitsIntoGroups(#selectedHills)"
+						"value": "units"
+					}, {
+						"name": "scriptName",
+						"value": "store"
+					} ],
+					"scriptName": "store"
+				}, {
+					"children": [],
+					"id": "LOQ8IfiafyEzMbF8gVw5jAxZ992hHTTQ",
+					"nodeType": "luaCommand",
+					"parameters": [ {
+						"name": "var",
+						"value": "transporter"
+					}, {
+						"name": "value",
+						"value": "units[1]"
 					}, {
 						"name": "scriptName",
 						"value": "store"
@@ -278,6 +321,51 @@
 					"name": "mode",
 					"value": "all-success"
 				} ]
+			}, {
+				"children": [],
+				"id": "wwd6WS5RB3qqMOxm45OjofxXA9d0uowx",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "transporter",
+					"value": "transporter"
+				}, {
+					"name": "unitsToLoad",
+					"value": "warriors"
+				}, {
+					"name": "scriptName",
+					"value": "nota_houska_hlaa.loadUnits"
+				} ],
+				"scriptName": "nota_houska_hlaa.loadUnits"
+			}, {
+				"children": [],
+				"id": "NKI4JtFlf7nPCUnsxu2L73Kj26a1bgpR",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "transporter",
+					"value": "transporter"
+				}, {
+					"name": "location",
+					"value": "enemyInfo[1]"
+				}, {
+					"name": "scriptName",
+					"value": "nota_houska_hlaa.unloadUnits"
+				} ],
+				"scriptName": "nota_houska_hlaa.unloadUnits"
+			}, {
+				"children": [],
+				"id": "wXBAYelfJDwoMntIwtU6Dh7ach83YcXv",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "groups"
+				}, {
+					"name": "value",
+					"value": "nota_houska_hlaa.DivideUnitsIntoGroups(#selectedHills)"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
 			}, {
 				"children": [ {
 					"children": [],
