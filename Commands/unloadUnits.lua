@@ -20,6 +20,12 @@ function getInfo()
 				variableType = "expression",
 				componentType = "checkBox",
 				defaultValue = "false",
+			},
+			{ 
+				name = "safeUnload",
+				variableType = "expression",
+				componentType = "checkBox",
+				defaultValue = "false",
 			}
 		}
 	}
@@ -34,14 +40,24 @@ function Run(self, units, parameter)
 	local location = parameter.location
 	
 	local useQueue = parameter.useQueue
+	local safeUnload = parameter.safeUnload
 	local modifier = {}
 
 	if useQueue then modifier = {"shift"} end
 	if type(transportIds) == "number" then transportIds = {transportIds} end
 
 	if not commands_issued then
-		for tKey, tId in pairs(transportIds) do		
-			SpringGiveOrderToUnit(tId, CMD.UNLOAD_UNITS, {location.x, location.y, location.z, 100}, modifier)
+		for tKey, tId in pairs(transportIds) do
+			
+			if safeUnload then
+				SpringGiveOrderToUnit(tId, CMD.MOVE, location:AsSpringVector(), modifier)
+				SpringGiveOrderToUnit(tId, CMD.TIMEWAIT, { 250 }, { "shift" })
+				SpringGiveOrderToUnit(tId, CMD.UNLOAD_UNITS, {location.x, location.y, location.z, 150}, { "shift" })		
+				SpringGiveOrderToUnit(tId, CMD.MOVE, location:AsSpringVector(), { "shift" })
+			else
+				SpringGiveOrderToUnit(tId, CMD.UNLOAD_UNITS, {location.x, location.y, location.z, 100}, modifier)		
+			end
+			
 		end
 
 		commands_issued = true

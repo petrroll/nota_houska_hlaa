@@ -6,7 +6,7 @@ local sensorInfo = {
 	license = "notAlicense",
 }
 
-local EVAL_PERIOD_DEFAULT = 0 -- actual, no caching
+local EVAL_PERIOD_DEFAULT = -1 -- actual, no caching
 
 function getInfo()
 	return {
@@ -21,26 +21,30 @@ VFS.Include(modules.attach.data.path .. modules.attach.data.head) -- attach lib 
 
 local SpringGetGroundHeight = Spring.GetGroundHeight 
 
--- @description from each close neighborhood return exactly one location
-return function(locations, neighborhoodTreshold)
+-- @description from each close neighborhood return exactly one location / {location, [location keys]} if richData == true
+return function(locations, neighborhoodTreshold, richData)
 	neighborhoodTreshold = neighborhoodTreshold or 512
+	richData = richData or false
 
-	aggrdCoefs = {}
 	aggrdLocs = {}
 	aggrdLocId = 1 --number of locations seen in specific neighborhoods, needed for average position calculation
 
-	for _, loc in pairs(locations) do
+	for key, loc in pairs(locations) do
 
 		local isCloseToAlreadySelected = false
-		for selectedLocKey, selectedLoc in pairs(aggrdLocs) do
+		for selectedNeighbKey, selectedNeighb in pairs(aggrdLocs) do
 			-- current location is within an already seen neighborhood
-			if loc:Distance(selectedLoc) < neighborhoodTreshold then
+			if loc:Distance(selectedNeighb[1]) < neighborhoodTreshold then
+				
 				-- newNeighborhoodCentre = (oldCentre * numberOfLocationsInNeighbSofar + newLocation) / (numberOfLocationsInNeighbSofar + 1)
-				local currCoef = aggrdCoefs[selectedLocKey]
-				local newSelectedLoc = (selectedLoc * currCoef + loc) / (currCoef + 1) 
+				local currCoef = aggrdLocs[selectedNeighbKey][3]
+				local newSelectedLoc = (selectedNeighb[1] * currCoef + loc) / (currCoef + 1) 
 
-				aggrdLocs[selectedLocKey] = newSelectedLoc
-				aggrdCoefs[selectedLocKey] = currCoef + 1
+				currCoef = currCoef + 1
+
+				aggrdLocs[selectedNeighbKey][1] = newSelectedLoc
+				aggrdLocs[selectedNeighbKey][2][currCoef] = key
+				aggrdLocs[selectedNeighbKey][3] = currCoef
 
 				isCloseToAlreadySelected = true
 			end
@@ -48,13 +52,17 @@ return function(locations, neighborhoodTreshold)
 
 		-- location from a completely new neighborhood
 		if isCloseToAlreadySelected == false then
-			aggrdCoefs[aggrdLocId] = 1
-			aggrdLocs[aggrdLocId] = loc
+			aggrdLocs[aggrdLocId] = {loc, {key}, 1}
 			aggrdLocId = aggrdLocId + 1
 		end
 		
 	end
 
-	return aggrdLocs
+	if not richData then
+		for i=1, #aggrdLocs do
+			aggrdLocs[i] = aggrdLocs[i][1]
+		end 
+	end
 
+	return aggrdLocs
 end
