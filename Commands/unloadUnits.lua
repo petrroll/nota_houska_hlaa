@@ -49,7 +49,7 @@ function Run(self, units, parameter)
     end
 
 	for tKey, tId in pairs(transportIds) do	
-		if #SpringGetUnitCommands(tId) > 0 then
+		if SpringGetUnitCommands(tId) ~= nil and #SpringGetUnitCommands(tId) > 0 then
 			return RUNNING
 		end
 	end	
