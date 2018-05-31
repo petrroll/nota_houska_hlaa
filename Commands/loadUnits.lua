@@ -54,12 +54,11 @@ function Run(self, units, parameter)
         local currTransportId = 1
 
         for tKey, tId in pairs(transportedIds) do		
-            currTransportId = (currTransportId % transportsNum) + 1
             SpringGiveOrderToUnit(transportIds[currTransportId], CMD.LOAD_UNITS, {tId}, modifier)
 
-            currTransportId = currTransportId + 1
-            -- We''ve issued first commands for all transports -> queue
+            -- We've issued first commands for all transports -> queue the next ones
             if currTransportId >= transportsNum then modifier = {"shift"} end
+            currTransportId = (currTransportId % transportsNum) + 1
         end
 
         firstRun = false
