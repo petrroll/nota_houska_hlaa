@@ -38,9 +38,9 @@
 			"y": -211
 		},
 		"Dw8M44vlyvX99tSRIV7fPaaWpB3RCqlk": {
-			"height": 92,
+			"height": 94,
 			"title": "storeWarriorsIds",
-			"width": 186,
+			"width": 357,
 			"x": 1050,
 			"y": 285
 		},
@@ -66,9 +66,9 @@
 			"y": -14
 		},
 		"NKI4JtFlf7nPCUnsxu2L73Kj26a1bgpR": {
-			"height": 92,
+			"height": 108,
 			"title": "unloadUnitsOnEnemyTower",
-			"width": 257,
+			"width": 259,
 			"x": 815,
 			"y": 579
 		},
@@ -150,7 +150,7 @@
 			"y": 689
 		},
 		"wwd6WS5RB3qqMOxm45OjofxXA9d0uowx": {
-			"height": 92,
+			"height": 108,
 			"title": "loadUnitsToTransporter",
 			"width": 241,
 			"x": 814,
@@ -293,7 +293,7 @@
 						"value": "warriors"
 					}, {
 						"name": "value",
-						"value": "units"
+						"value": "nota_houska_hlaa.UnitsToMapOfUIds()"
 					}, {
 						"name": "scriptName",
 						"value": "store"
@@ -332,6 +332,9 @@
 					"name": "unitsToLoad",
 					"value": "warriors"
 				}, {
+					"name": "useQueue",
+					"value": "false"
+				}, {
 					"name": "scriptName",
 					"value": "nota_houska_hlaa.loadUnits"
 				} ],
@@ -346,6 +349,9 @@
 				}, {
 					"name": "location",
 					"value": "enemyInfo[1]"
+				}, {
+					"name": "useQueue",
+					"value": "false"
 				}, {
 					"name": "scriptName",
 					"value": "nota_houska_hlaa.unloadUnits"

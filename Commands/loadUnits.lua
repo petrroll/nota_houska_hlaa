@@ -14,10 +14,21 @@ function getInfo()
 				variableType = "expression",
 				componentType = "editBox",
 				defaultValue = "",
-			},
+            },
+			{ 
+				name = "useQueue",
+				variableType = "expression",
+				componentType = "checkBox",
+				defaultValue = "false",
+			}
+
 		}
 	}
 end
+
+
+SpringGiveOrderToUnit = Spring.GiveOrderToUnit
+SpringGetUnitCommands = Spring.GetUnitCommands
 
 function getUnitsVecPocition(uid)
     local pointX, pointY, pointZ = Spring.GetUnitPosition(uid)
@@ -26,45 +37,45 @@ function getUnitsVecPocition(uid)
     return loc
 end
 
-loading = 0
-finished = false
-beforeQueueKicksInCooldown = 1
+firstRun = true
 function Run(self, units, parameter)
-	local transporterId = parameter.transporter
+
+	local transportIds = parameter.transporter
     local transportedIds = parameter.unitsToLoad
 
-    -- keeping altenative method for reference
-    -- Spring.GiveOrderToUnit(transporterId, CMD.LOAD_UNITS, {loadPosition.x, loadPosition.y, loadPosition.z, 500}, {})
+	local useQueue = parameter.useQueue
+	local modifier = {}
 
-    if #Spring.GetUnitCommands(transporterId) == 0 then
-        if beforeQueueKicksInCooldown > 0 then
-            beforeQueueKicksInCooldown = beforeQueueKicksInCooldown - 1
-            return RUNNING
+	if useQueue or not firstRun then modifier = {"shift"} end
+	if type(transportIds) == "number" then transportIds = {transportIds} end
+
+    if firstRun then
+        local transportsNum = #transportIds
+        local currTransportId = 1
+
+        for tKey, tId in pairs(transportedIds) do		
+            currTransportId = (currTransportId % transportsNum) + 1
+            SpringGiveOrderToUnit(transportIds[currTransportId], CMD.LOAD_UNITS, {tId}, modifier)
+
+            currTransportId = currTransportId + 1
+            -- We''ve issued first commands for all transports -> queue
+            if currTransportId >= transportsNum then modifier = {"shift"} end
         end
 
-        loading = loading + 1
-        if loading <= transportedIds.length then
-            Spring.Echo("loading")
-            Spring.Echo(loading)
-            Spring.GiveOrderToUnit(transporterId, CMD.LOAD_UNITS, {transportedIds[loading]}, {})
-            beforeQueueKicksInCooldown = 1
-        else
-            Spring.Echo("finished")
-            finished = true
-        end
-    else
-        beforeQueueKicksInCooldown = 0
+        firstRun = false
+        return RUNNING
     end
-    
 
-    if finished then return SUCCESS
-    else return RUNNING end
+	for tKey, tId in pairs(transportIds) do	
+		if #SpringGetUnitCommands(tId) > 0 then
+			return RUNNING
+        end
+    end
 
+    return SUCCESS
 
 end
 
 function Reset(self)
-    loading = 0
-    finished = false
-    beforeQueueKicksInCooldown = 1
+    firstRun = true
 end

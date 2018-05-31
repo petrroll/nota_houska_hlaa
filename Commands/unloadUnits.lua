@@ -15,35 +15,49 @@ function getInfo()
 				componentType = "editBox",
 				defaultValue = "",
 			},
+			{ 
+				name = "useQueue",
+				variableType = "expression",
+				componentType = "checkBox",
+				defaultValue = "false",
+			}
 		}
 	}
 end
 
---sometimes it takes a few frames before the queue for transporter registers the unload command
-beforeQueueKicksInCooldown = 2 
-command_issued = false
+SpringGiveOrderToUnit = Spring.GiveOrderToUnit
+SpringGetUnitCommands = Spring.GetUnitCommands
+
+commands_issued = false
 function Run(self, units, parameter)
-	local transporterId = parameter.transporter
-    local location = parameter.location
+	local transportIds = parameter.transporter
+	local location = parameter.location
+	
+	local useQueue = parameter.useQueue
+	local modifier = {}
 
-    if not command_issued then
-        Spring.GiveOrderToUnit(transporterId, CMD.UNLOAD_UNITS, {location.x, location.y, location.z, 100}, {})
-        command_issued = true
+	if useQueue then modifier = {"shift"} end
+	if type(transportIds) == "number" then transportIds = {transportIds} end
+
+	if not commands_issued then
+		for tKey, tId in pairs(transportIds) do		
+			SpringGiveOrderToUnit(tId, CMD.UNLOAD_UNITS, {location.x, location.y, location.z, 100}, modifier)
+		end
+
+		commands_issued = true
+		return RUNNING
     end
 
-    if #Spring.GetUnitCommands(transporterId) == 0 then
-        if beforeQueueKicksInCooldown > 0 then
-            beforeQueueKicksInCooldown = beforeQueueKicksInCooldown - 1
-            return RUNNING
-        end
-        return SUCCESS
-    else 
-        beforeQueueKicksInCooldown = 0
-        return RUNNING
-    end
+	for tKey, tId in pairs(transportIds) do	
+		if #SpringGetUnitCommands(tId) > 0 then
+			return RUNNING
+		end
+	end	
+
+	return SUCCESS
+
 end
 
 function Reset(self)
-    beforeQueueKicksInCooldown = 2
-    command_issued = false
+	commands_issued = false
 end
