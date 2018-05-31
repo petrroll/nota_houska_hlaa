@@ -17,7 +17,7 @@ end
 -- speedups
 local SpringGetUnitPosition = Spring.GetUnitPosition
 
--- @description return static position of the first unit
+-- @description return static position of a unit
 return function(uid)
 	local x,y,z = SpringGetUnitPosition(uid)
 	return Vec3(x,y,z)

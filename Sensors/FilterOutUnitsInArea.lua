@@ -25,13 +25,11 @@ function GetPosition(uid)
 	return Vec3(x,y,z)
 end
 
--- @description divides units into a number of groups
+-- @description filters out unit ids that corresponds to units in certain area
 return function(uids, areaCenter, areaRadius)
 
 	local notFilteredUIds = {}
 	local j = 1
-
-	-- return Sensors
 
 	for i=1, #uids do
 
