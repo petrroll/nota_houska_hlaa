@@ -47,10 +47,10 @@ return function(enemyPos, flyingHeight, gridGranularity)
 
             local location = Vec3(x, SpringGetGroundHeight(x,y), y) 
             if isLocationSafe(location + Vec3(0, flyingHeight, 0), enemyPos) then
-                grid[xi][yi] = { true, location }
+                grid[xi][yi] = { safe=true, loc=location }
                 goodLocs[#goodLocs + 1] = location
             else
-                grid[xi][yi] = { false, location }
+                grid[xi][yi] = { safe=false, loc=location }
             end
 
             yi = yi + 1
