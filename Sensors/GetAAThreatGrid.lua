@@ -19,14 +19,29 @@ mapSizeZ = Game.mapSizeZ
 
 SpringGetGroundHeight = Spring.GetGroundHeight
 
-RANGE = 1100
-HEIGHT_RANGE = 300
+MIN_PURE_DIST = 1100
 
+MIN_PURE_HIGHT = 1500
+HIGHT_DIST_RATIO = 10
+MIN_DISTANCE = 512
+
+MIN_COMBINATION = 800 * 600
+
+MAX_HEIGHT = 760
 
 local function isLocationSafe(location, enemyPos)
     for id, enemyPos in pairs(enemyPos) do
+        
         local heightDiff = math.abs(enemyPos.y - location.y)
-        if (enemyPos:Distance(location) < RANGE and heightDiff < HEIGHT_RANGE) then
+        local rangeDiff = enemyPos:Distance(location)
+
+        local locNotTooHigh = (location.y < MAX_HEIGHT)
+
+        local enemyFarEnough = (rangeDiff > MIN_PURE_DIST)
+        local enemyHighEnough = (heightDiff > MIN_PURE_HIGHT and heightDiff/rangeDiff > HIGHT_DIST_RATIO and rangeDiff > MIN_DISTANCE)
+        local enemyCombinationEnough = (rangeDiff * heightDiff > MIN_COMBINATION)
+
+        if not ( (enemyFarEnough or enemyHighEnough or enemyCombinationEnough) and (locNotTooHigh) ) then
             return false
         end
     end
@@ -38,11 +53,11 @@ return function(enemyPos, flyingHeight, gridGranularity)
     local grid = {}
     local goodLocs = {}
 
-    xi = 1
+    xi = 1 -- x:index to grid
     for x=0, mapSizeX, gridGranularity do
         grid[xi] = {}
         
-        yi = 1
+        yi = 1 -- y:index to grid
         for y=0, mapSizeZ, gridGranularity do
 
             local location = Vec3(x, SpringGetGroundHeight(x,y), y) 
