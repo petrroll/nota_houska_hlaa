@@ -25,161 +25,126 @@
 			"height": 94,
 			"title": "storeTransportsIds",
 			"width": 357,
-			"x": 889,
+			"x": 887,
 			"y": -78
-		},
-		"5AsA3jkg3ubgyCJU1nLhcdC9LngRD3I7": {
-			"height": 72,
-			"title": "waitUntil",
-			"width": 150,
-			"x": 728,
-			"y": 1379
 		},
 		"5VoreDPDUXQDJ8RmPOxyHNL1z0S4jSz7": {
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 469,
+			"x": 468,
 			"y": 778
 		},
 		"6xVVU5wTMyeFTdVdjKK1pcsHZtX6ow0M": {
 			"height": 94,
 			"title": "storeEnemyPositions",
 			"width": 413,
-			"x": 773,
+			"x": 771,
 			"y": 381
+		},
+		"ASXst9WyM50VVTUZg0qCTd7BAJr2i7Qm": {
+			"height": 214,
+			"title": "saveUnits",
+			"width": 296,
+			"x": 674,
+			"y": 776
 		},
 		"CyVxj3jvqnakwlGzSBnfob3rCpwVfNWH": {
 			"height": 94,
 			"title": "saveMissionInfo",
 			"width": 303,
-			"x": 519,
+			"x": 518,
 			"y": -134
-		},
-		"DrbIBXQNivOBfgLU3XmWRe2Ko180qJIN": {
-			"height": 92,
-			"title": "nota_houska_hlaa.moveGroupAlongPath",
-			"width": 342,
-			"x": 723,
-			"y": 872
-		},
-		"FE1Q9w3FmGVLFQzHLwXnXTMupE3r1WdD": {
-			"height": 130,
-			"title": "nota_houska_hlaa.loadUnits",
-			"width": 261,
-			"x": 716,
-			"y": 958
-		},
-		"GTc4NTq8kultbAFeGTjnqszzQ2JpNMw7": {
-			"height": 94,
-			"title": "store",
-			"width": 560,
-			"x": 728,
-			"y": 756
-		},
-		"HEct7xfvhsuZkbyRFvra3xYFivmyReVS": {
-			"height": 94,
-			"title": "nota_houska_hlaa.moveGroupAlongPath",
-			"width": 372,
-			"x": 710,
-			"y": 1107
 		},
 		"Hpl3PkwHPfLIbNuxa5eEFMpKZk1zmdMV": {
 			"height": 72,
 			"title": "waitUntil",
 			"width": 150,
-			"x": 1423,
+			"x": 1421,
 			"y": 2097
 		},
 		"N5SWyspdrlU4EqQUDuVWuPYYkMzeihk1": {
 			"height": 94,
 			"title": "storeReconIds",
 			"width": 336,
-			"x": 890,
+			"x": 888,
 			"y": 15
-		},
-		"SKVvi6p2XK4OOjWmXRovsYSVUI49jywu": {
-			"height": 130,
-			"title": "nota_houska_hlaa.unloadUnits",
-			"width": 277,
-			"x": 724,
-			"y": 1222
 		},
 		"TKrge4UfoH45oTUbqa9767Uiw6NezNsA": {
 			"height": 94,
 			"title": "storeAAThreatGrid",
 			"width": 533,
-			"x": 760,
+			"x": 758,
 			"y": 623
 		},
 		"UHPR3gNPZIn1gd6jAkUBkXep4AJcGpIJ": {
 			"height": 65,
 			"title": "successForIgnoredUnits (buildings, radars)",
 			"width": 354,
-			"x": 896,
+			"x": 894,
 			"y": 107
 		},
 		"XTylBUrSShxIETYCJSL6q1wVnlQjNQyo": {
 			"height": 94,
 			"title": "aggregateEnemyUnits",
 			"width": 517,
-			"x": 737,
+			"x": 735,
 			"y": 504
 		},
 		"YzpZrIL9o0ZSwnCBIYlKPwzA3OtIJPrk": {
 			"height": 94,
 			"title": "storeFightingUnits",
 			"width": 336,
-			"x": 1336,
+			"x": 1334,
 			"y": 237
 		},
 		"c6jInncf4AYZW7DUq1IQjAJJYuLiCznb": {
 			"height": 60,
 			"title": "processStrandedUnits",
 			"width": 222,
-			"x": 1020,
+			"x": 1018,
 			"y": 184
 		},
 		"ghznwiduDwQKw5WytU3GHq3RmnpHgjnE": {
 			"height": 94,
 			"title": "aggregateStrandedUnits",
 			"width": 544,
-			"x": 1335,
+			"x": 1333,
 			"y": 546
 		},
 		"hNCFDLWojmt9cHf8jdV27vhabQZQ7bqr": {
 			"height": 54,
 			"title": "processEnemyUnits",
 			"width": 208,
-			"x": 469,
+			"x": 468,
 			"y": 411
 		},
 		"k9esq3WapEo241L1BM03975aA94Baxem": {
 			"height": 101,
 			"title": "filterStrandedUnits",
 			"width": 641,
-			"x": 1337,
+			"x": 1335,
 			"y": 335
 		},
 		"qltEZUpuLeZHK6YSanCnH3hwhsh6m0oW": {
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 245,
+			"x": 244,
 			"y": 24
 		},
 		"uDbqRed2AnNeb7qaAb46ahkm7OEjFNtB": {
 			"height": 94,
 			"title": "storeStrandedUnitsLocs",
 			"width": 374,
-			"x": 1333,
+			"x": 1331,
 			"y": 445
 		},
 		"x8lfUvgZi0f2BrTd3uF0KzrQ0CnS0HfE": {
 			"height": 70,
 			"title": "categorizeAndProcessMyUnits",
 			"width": 274,
-			"x": 520,
+			"x": 519,
 			"y": -21
 		}
 	},
@@ -373,103 +338,29 @@
 		}, {
 			"children": [ {
 				"children": [],
-				"id": "GTc4NTq8kultbAFeGTjnqszzQ2JpNMw7",
-				"nodeType": "luaCommand",
+				"id": "ASXst9WyM50VVTUZg0qCTd7BAJr2i7Qm",
+				"nodeType": "reference",
 				"parameters": [ {
-					"name": "var",
-					"value": "pathData"
-				}, {
-					"name": "value",
-					"value": "nota_houska_hlaa.GetPath(evacLoc.center, saveLocs[3][1], AAThreatGrid)"
-				}, {
-					"name": "scriptName",
-					"value": "store"
+					"name": "behaviourName",
+					"value": "nota_houska_hlaa.rescueUnits"
 				} ],
-				"scriptName": "store"
-			}, {
-				"children": [],
-				"id": "DrbIBXQNivOBfgLU3XmWRe2Ko180qJIN",
-				"nodeType": "luaCommand",
-				"parameters": [ {
-					"name": "unitsToMove",
+				"referenceInputs": [ {
+					"name": "threatGrid",
+					"value": "AAThreatGrid"
+				}, {
+					"name": "strandedMeetingPoint",
+					"value": "saveLocs[1][1]"
+				}, {
+					"name": "strandedUIds",
+					"value": "saveLocs[1][2]"
+				}, {
+					"name": "evacLoc",
+					"value": "evacLoc"
+				}, {
+					"name": "transports",
 					"value": "transports"
-				}, {
-					"name": "path",
-					"value": "pathData.dta"
-				}, {
-					"name": "scriptName",
-					"value": "nota_houska_hlaa.moveGroupAlongPath"
 				} ],
-				"scriptName": "nota_houska_hlaa.moveGroupAlongPath"
-			}, {
-				"children": [],
-				"id": "FE1Q9w3FmGVLFQzHLwXnXTMupE3r1WdD",
-				"nodeType": "luaCommand",
-				"parameters": [ {
-					"name": "transporter",
-					"value": "transports"
-				}, {
-					"name": "unitsToLoad",
-					"value": "saveLocs[3][2]"
-				}, {
-					"name": "useQueue",
-					"value": "false"
-				}, {
-					"name": "queueLoading",
-					"value": "false"
-				}, {
-					"name": "scriptName",
-					"value": "nota_houska_hlaa.loadUnits"
-				} ],
-				"scriptName": "nota_houska_hlaa.loadUnits"
-			}, {
-				"children": [],
-				"id": "HEct7xfvhsuZkbyRFvra3xYFivmyReVS",
-				"nodeType": "luaCommand",
-				"parameters": [ {
-					"name": "unitsToMove",
-					"value": "transports"
-				}, {
-					"name": "path",
-					"value": "nota_houska_hlaa.ReverseMap(pathData.dta)"
-				}, {
-					"name": "scriptName",
-					"value": "nota_houska_hlaa.moveGroupAlongPath"
-				} ],
-				"scriptName": "nota_houska_hlaa.moveGroupAlongPath"
-			}, {
-				"children": [],
-				"id": "SKVvi6p2XK4OOjWmXRovsYSVUI49jywu",
-				"nodeType": "luaCommand",
-				"parameters": [ {
-					"name": "transporter",
-					"value": "transports"
-				}, {
-					"name": "location",
-					"value": "evacLoc.center"
-				}, {
-					"name": "useQueue",
-					"value": "false"
-				}, {
-					"name": "safeUnload",
-					"value": "true"
-				}, {
-					"name": "scriptName",
-					"value": "nota_houska_hlaa.unloadUnits"
-				} ],
-				"scriptName": "nota_houska_hlaa.unloadUnits"
-			}, {
-				"children": [],
-				"id": "5AsA3jkg3ubgyCJU1nLhcdC9LngRD3I7",
-				"nodeType": "luaCommand",
-				"parameters": [ {
-					"name": "condition",
-					"value": "false"
-				}, {
-					"name": "scriptName",
-					"value": "waitUntil"
-				} ],
-				"scriptName": "waitUntil"
+				"referenceOutputs": []
 			} ],
 			"id": "5VoreDPDUXQDJ8RmPOxyHNL1z0S4jSz7",
 			"nodeType": "sequence",
