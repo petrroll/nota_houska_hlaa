@@ -25,126 +25,126 @@
 			"height": 94,
 			"title": "storeTransportsIds",
 			"width": 357,
-			"x": 887,
+			"x": 886,
 			"y": -78
 		},
 		"5VoreDPDUXQDJ8RmPOxyHNL1z0S4jSz7": {
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 468,
+			"x": 467,
 			"y": 778
 		},
 		"6xVVU5wTMyeFTdVdjKK1pcsHZtX6ow0M": {
 			"height": 94,
 			"title": "storeEnemyPositions",
 			"width": 413,
-			"x": 771,
+			"x": 770,
 			"y": 381
 		},
 		"ASXst9WyM50VVTUZg0qCTd7BAJr2i7Qm": {
 			"height": 214,
 			"title": "saveUnits",
 			"width": 296,
-			"x": 674,
-			"y": 776
+			"x": 736,
+			"y": 757
 		},
 		"CyVxj3jvqnakwlGzSBnfob3rCpwVfNWH": {
 			"height": 94,
 			"title": "saveMissionInfo",
 			"width": 303,
-			"x": 518,
+			"x": 517,
 			"y": -134
 		},
 		"Hpl3PkwHPfLIbNuxa5eEFMpKZk1zmdMV": {
 			"height": 72,
 			"title": "waitUntil",
 			"width": 150,
-			"x": 1421,
+			"x": 1420,
 			"y": 2097
 		},
 		"N5SWyspdrlU4EqQUDuVWuPYYkMzeihk1": {
 			"height": 94,
 			"title": "storeReconIds",
 			"width": 336,
-			"x": 888,
+			"x": 887,
 			"y": 15
 		},
 		"TKrge4UfoH45oTUbqa9767Uiw6NezNsA": {
 			"height": 94,
 			"title": "storeAAThreatGrid",
 			"width": 533,
-			"x": 758,
+			"x": 757,
 			"y": 623
 		},
 		"UHPR3gNPZIn1gd6jAkUBkXep4AJcGpIJ": {
 			"height": 65,
 			"title": "successForIgnoredUnits (buildings, radars)",
 			"width": 354,
-			"x": 894,
+			"x": 893,
 			"y": 107
 		},
 		"XTylBUrSShxIETYCJSL6q1wVnlQjNQyo": {
 			"height": 94,
 			"title": "aggregateEnemyUnits",
 			"width": 517,
-			"x": 735,
+			"x": 734,
 			"y": 504
 		},
 		"YzpZrIL9o0ZSwnCBIYlKPwzA3OtIJPrk": {
 			"height": 94,
 			"title": "storeFightingUnits",
 			"width": 336,
-			"x": 1334,
-			"y": 237
+			"x": 1331,
+			"y": 163
 		},
 		"c6jInncf4AYZW7DUq1IQjAJJYuLiCznb": {
 			"height": 60,
 			"title": "processStrandedUnits",
 			"width": 222,
-			"x": 1018,
-			"y": 184
+			"x": 1019,
+			"y": 175
 		},
 		"ghznwiduDwQKw5WytU3GHq3RmnpHgjnE": {
 			"height": 94,
 			"title": "aggregateStrandedUnits",
 			"width": 544,
-			"x": 1333,
+			"x": 1332,
 			"y": 546
 		},
 		"hNCFDLWojmt9cHf8jdV27vhabQZQ7bqr": {
 			"height": 54,
 			"title": "processEnemyUnits",
 			"width": 208,
-			"x": 468,
+			"x": 467,
 			"y": 411
 		},
 		"k9esq3WapEo241L1BM03975aA94Baxem": {
 			"height": 101,
 			"title": "filterStrandedUnits",
 			"width": 641,
-			"x": 1335,
+			"x": 1334,
 			"y": 335
 		},
 		"qltEZUpuLeZHK6YSanCnH3hwhsh6m0oW": {
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 244,
+			"x": 243,
 			"y": 24
 		},
 		"uDbqRed2AnNeb7qaAb46ahkm7OEjFNtB": {
 			"height": 94,
 			"title": "storeStrandedUnitsLocs",
 			"width": 374,
-			"x": 1331,
+			"x": 1330,
 			"y": 445
 		},
 		"x8lfUvgZi0f2BrTd3uF0KzrQ0CnS0HfE": {
 			"height": 70,
 			"title": "categorizeAndProcessMyUnits",
 			"width": 274,
-			"x": 519,
+			"x": 518,
 			"y": -21
 		}
 	},
