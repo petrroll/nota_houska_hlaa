@@ -42,8 +42,8 @@
 			"height": 92,
 			"title": "store",
 			"width": 131,
-			"x": 1723,
-			"y": 665
+			"x": 1714,
+			"y": 846
 		},
 		"5jGhfKl2MCLirufOljoNqgn6i9hwncpB": {
 			"height": 54,
@@ -70,15 +70,15 @@
 			"height": 90,
 			"title": "finishIfAllUnitsEvaced",
 			"width": 216,
-			"x": 1456,
-			"y": 630
+			"x": 1444,
+			"y": 804
 		},
 		"GBypIIIVImYdh9BUYHrPmxJ3Dhyh4rFR": {
 			"height": 54,
 			"title": "success",
 			"width": 132,
-			"x": 1723,
-			"y": 611
+			"x": 1724,
+			"y": 786
 		},
 		"IW2S3RQCyotj9mVRSTKowts4XajWX9Dc": {
 			"height": 92,
@@ -133,8 +133,15 @@
 			"height": 94,
 			"title": "storeStillStrandedUids",
 			"width": 660,
-			"x": 1452,
-			"y": 507
+			"x": 1482,
+			"y": 610
+		},
+		"eN6wWkP4vTx7o8HP8bvf1VosaD2hhmz4": {
+			"height": 94,
+			"title": "filterDeadUnits",
+			"width": 429,
+			"x": 1486,
+			"y": 516
 		},
 		"iG3eTnzuGosTlc4LtbhDjrW9TskLxJWs": {
 			"height": 94,
@@ -346,6 +353,21 @@
 						"parameters": []
 					}, {
 						"children": [ {
+							"children": [],
+							"id": "eN6wWkP4vTx7o8HP8bvf1VosaD2hhmz4",
+							"nodeType": "luaCommand",
+							"parameters": [ {
+								"name": "var",
+								"value": "strandedUIds"
+							}, {
+								"name": "value",
+								"value": "nota_houska_hlaa.FilterDestroyedUnits(strandedUIds)"
+							}, {
+								"name": "scriptName",
+								"value": "store"
+							} ],
+							"scriptName": "store"
+						}, {
 							"children": [],
 							"id": "bWzfT2Om66GECHhrxhmnxZl2ITIzqRp2",
 							"nodeType": "luaCommand",
