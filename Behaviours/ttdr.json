@@ -21,110 +21,131 @@
 	"inputs": [],
 	"outputs": [],
 	"properties": {
+		"2S3JCRjCwft78UDvAZXK2tU5tHWXGCEJ": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 194,
+			"x": 1339,
+			"y": 385
+		},
 		"45komPhaRThvIOEqxojzSaLFQYdcDcq8": {
 			"height": 94,
 			"title": "storeTransportsIds",
 			"width": 357,
-			"x": 886,
+			"x": 885,
 			"y": -78
 		},
 		"5VoreDPDUXQDJ8RmPOxyHNL1z0S4jSz7": {
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 467,
+			"x": 466,
 			"y": 778
 		},
 		"6xVVU5wTMyeFTdVdjKK1pcsHZtX6ow0M": {
 			"height": 94,
 			"title": "storeEnemyPositions",
 			"width": 413,
-			"x": 770,
+			"x": 769,
 			"y": 381
 		},
 		"ASXst9WyM50VVTUZg0qCTd7BAJr2i7Qm": {
 			"height": 214,
 			"title": "saveUnits",
-			"width": 296,
-			"x": 736,
+			"width": 304,
+			"x": 735,
 			"y": 757
 		},
 		"CyVxj3jvqnakwlGzSBnfob3rCpwVfNWH": {
 			"height": 94,
 			"title": "saveMissionInfo",
 			"width": 303,
-			"x": 517,
+			"x": 516,
 			"y": -134
+		},
+		"FnFJuJTMyPI9EJ6MVuOd0Yz2fhfAg5sf": {
+			"height": 54,
+			"title": "success",
+			"width": 132,
+			"x": 1598,
+			"y": 380
 		},
 		"Hpl3PkwHPfLIbNuxa5eEFMpKZk1zmdMV": {
 			"height": 72,
 			"title": "waitUntil",
 			"width": 150,
-			"x": 1420,
+			"x": 1419,
 			"y": 2097
 		},
 		"N5SWyspdrlU4EqQUDuVWuPYYkMzeihk1": {
 			"height": 94,
 			"title": "storeReconIds",
 			"width": 336,
-			"x": 887,
+			"x": 886,
 			"y": 15
 		},
 		"TKrge4UfoH45oTUbqa9767Uiw6NezNsA": {
 			"height": 94,
 			"title": "storeAAThreatGrid",
 			"width": 533,
-			"x": 757,
+			"x": 756,
 			"y": 623
 		},
 		"UHPR3gNPZIn1gd6jAkUBkXep4AJcGpIJ": {
 			"height": 65,
 			"title": "successForIgnoredUnits (buildings, radars)",
 			"width": 354,
-			"x": 893,
+			"x": 892,
 			"y": 107
+		},
+		"Vz3mFXhQyNSVcx1LuiLJkC81HqcNFisT": {
+			"height": 54,
+			"title": "nota_houska_hlaa.endGame",
+			"width": 265,
+			"x": 1597,
+			"y": 432
 		},
 		"XTylBUrSShxIETYCJSL6q1wVnlQjNQyo": {
 			"height": 94,
 			"title": "aggregateEnemyUnits",
 			"width": 517,
-			"x": 734,
+			"x": 733,
 			"y": 504
 		},
 		"YzpZrIL9o0ZSwnCBIYlKPwzA3OtIJPrk": {
 			"height": 94,
 			"title": "storeFightingUnits",
 			"width": 336,
-			"x": 1331,
+			"x": 1330,
 			"y": 163
 		},
 		"c6jInncf4AYZW7DUq1IQjAJJYuLiCznb": {
 			"height": 60,
 			"title": "processStrandedUnits",
 			"width": 222,
-			"x": 1019,
+			"x": 1018,
 			"y": 175
 		},
 		"ghznwiduDwQKw5WytU3GHq3RmnpHgjnE": {
 			"height": 94,
 			"title": "aggregateStrandedUnits",
 			"width": 544,
-			"x": 1332,
-			"y": 546
+			"x": 1337,
+			"y": 574
 		},
 		"hNCFDLWojmt9cHf8jdV27vhabQZQ7bqr": {
 			"height": 54,
 			"title": "processEnemyUnits",
 			"width": 208,
-			"x": 467,
+			"x": 466,
 			"y": 411
 		},
 		"k9esq3WapEo241L1BM03975aA94Baxem": {
 			"height": 101,
 			"title": "filterStrandedUnits",
 			"width": 641,
-			"x": 1334,
-			"y": 335
+			"x": 1332,
+			"y": 262
 		},
 		"qltEZUpuLeZHK6YSanCnH3hwhsh6m0oW": {
 			"height": 60,
@@ -137,14 +158,14 @@
 			"height": 94,
 			"title": "storeStrandedUnitsLocs",
 			"width": 374,
-			"x": 1330,
-			"y": 445
+			"x": 1336,
+			"y": 485
 		},
 		"x8lfUvgZi0f2BrTd3uF0KzrQ0CnS0HfE": {
 			"height": 70,
 			"title": "categorizeAndProcessMyUnits",
 			"width": 274,
-			"x": 518,
+			"x": 517,
 			"y": -21
 		}
 	},
@@ -244,6 +265,31 @@
 						"value": "store"
 					} ],
 					"scriptName": "store"
+				}, {
+					"children": [ {
+						"children": [],
+						"id": "FnFJuJTMyPI9EJ6MVuOd0Yz2fhfAg5sf",
+						"nodeType": "success",
+						"parameters": []
+					}, {
+						"children": [],
+						"id": "Vz3mFXhQyNSVcx1LuiLJkC81HqcNFisT",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "scriptName",
+							"value": "nota_houska_hlaa.endGame"
+						} ],
+						"scriptName": "nota_houska_hlaa.endGame"
+					} ],
+					"id": "2S3JCRjCwft78UDvAZXK2tU5tHWXGCEJ",
+					"nodeType": "luaCondition",
+					"parameters": [ {
+						"name": "expression",
+						"value": "#unitsToSave > 0"
+					}, {
+						"name": "repeat",
+						"value": "false"
+					} ]
 				}, {
 					"children": [],
 					"id": "uDbqRed2AnNeb7qaAb46ahkm7OEjFNtB",
