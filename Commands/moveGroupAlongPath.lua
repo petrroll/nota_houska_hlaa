@@ -25,6 +25,7 @@ local THRESHOLD = 1024
 -- speed-ups
 local SpringGetUnitPosition = Spring.GetUnitPosition
 local SpringGiveOrderToUnit = Spring.GiveOrderToUnit
+local SpringGetUnitHealth = Spring.GetUnitHealth
 
 commandsIssued = false
 function Run(self, units, parameter)
@@ -42,7 +43,7 @@ function Run(self, units, parameter)
 			for j=1, #path do
 				SpringGiveOrderToUnit(currUid, cmdID, path[j]:AsSpringVector(), {"shift"})
 			end	
-			
+
 		end
 		commandsIssued = true
 		return RUNNING
@@ -54,7 +55,7 @@ function Run(self, units, parameter)
 		local currUidLoc = Vec3(pointX, pointY, pointZ)
 
 		if currUidLoc:Distance(path[#path]) > THRESHOLD then
-			if Spring.GetUnitHealth(currUid) ~= nil then
+			if SpringGetUnitHealth(currUid) ~= nil then
 				return RUNNING
 			end
 		end
