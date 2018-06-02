@@ -111,15 +111,25 @@ end
 
 -- @description returns map of locations specifying a path in a given grid graph
 return function(startPos, destPos, boolGridObj)
+    local graphGrid = boolGridObj.grid   
 
     local startXi = math.floor(startPos.x / boolGridObj.granularity) + 1
     local startYi = math.floor(startPos.z / boolGridObj.granularity) + 1
-    local start = {x=startXi, y=startYi}
 
     local destXi = math.floor(destPos.x / boolGridObj.granularity) + 1
     local destYi = math.floor(destPos.z / boolGridObj.granularity) + 1
-    local dest = {x=destXi, y=destYi}
 
+    local gridSizeX = #graphGrid
+    local gridSizeY = #(graphGrid[1])
+
+    if destXi > gridSizeX then destXi = gridSizeX end 
+    if destYi > gridSizeY then destYi = gridSizeY end 
+    if startXi > gridSizeX then startXi = gridSizeX end 
+    if startYi > gridSizeY then startYi = gridSizeY end 
+
+    local start = {x=startXi, y=startYi}
+    local dest = {x=destXi, y=destYi}
+    
 
     -- The whole current distance and hight keeping in navGraph is an ugly hack to add
     -- ..some non-one distances support to BFS. I.e to add support for prefering certain
@@ -127,9 +137,9 @@ return function(startPos, destPos, boolGridObj)
     -- ..that captures the preference of not going higher should be used instead. 
     -- ..In case of refactoring: remember this heap: https://github.com/geoffleyland/lua-heaps
 
-    local function neighborExistsSafeNotExploredOrBetter(nb, currLoc, navGraph, graphGrid)
-        if not (nb.x >= 1 and nb.x <= #graphGrid) then return false end         -- neighbor not on map in x -> false  
-        if not (nb.y >= 1 and nb.y <= #(graphGrid[1])) then return false end    -- neighbor not on map in y -> false  
+    local function neighborExistsSafeNotExploredOrBetter(nb, currLoc, navGraph, graphGrid, gridSizeX, gridSizeY)
+        if not (nb.x >= 1 and nb.x <= gridSizeX) then return false end         -- neighbor not on map in x -> false  
+        if not (nb.y >= 1 and nb.y <= gridSizeY) then return false end    -- neighbor not on map in y -> false  
         
         if not (graphGrid[nb.x][nb.y].safe) then return false end -- nb not safe -> false
         if navGraph[nb.x][nb.y] == nil then return true end       -- nb not visited -> true
@@ -139,9 +149,7 @@ return function(startPos, destPos, boolGridObj)
     end
     
     local nbs = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {-1, -1}, {1, 1}, {-1, 1}, {1, -1}}
-    
     local bfsQ = newQueue()
-    local graphGrid = boolGridObj.grid   
 
     local navGraph = {}
     navGraph[dest.x] = {}
@@ -156,7 +164,7 @@ return function(startPos, destPos, boolGridObj)
             if navGraph[nb.x] == nil then navGraph[nb.x] = {} end   
 
             -- if the neighbor is safe & hasn't been explored yet -> add to navGraph & queue
-            if neighborExistsSafeNotExploredOrBetter(nb, currLoc, navGraph, graphGrid) then
+            if neighborExistsSafeNotExploredOrBetter(nb, currLoc, navGraph, graphGrid, gridSizeX, gridSizeY) then
                 if navGraph[nb.x][nb.y] == nil then bfsQ:push_left(nb) end -- need to check -> can be just updating pred with a lower hight 
                 navGraph[nb.x][nb.y] = {pred= currLoc, predHig=graphGrid[currLoc.x][currLoc.y].loc.y, dis = navGraph[currLoc.x][currLoc.y].dis + 1}
             end
