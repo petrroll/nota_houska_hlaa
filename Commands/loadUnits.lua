@@ -90,7 +90,7 @@ function Run(self, units, parameter)
 
         local unitDefId = SpringGetUnitDefID(tId)
         local capacity = 0
-        if unitDefId ~= nil then local capacity = UnitDefs[unitDefId].transportCapacity end
+        if unitDefId ~= nil then capacity = UnitDefs[unitDefId].transportCapacity end
 
         if (transUnits ~= nil and #transUnits < capacity) and (cmdQ ~= nil and #cmdQ > 0) then
             return RUNNING
