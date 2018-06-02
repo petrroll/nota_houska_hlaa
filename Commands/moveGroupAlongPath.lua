@@ -35,8 +35,6 @@ function Run(self, units, parameter)
 	local cmdID = CMD.MOVE
 
 	if not commandsIssued then
-		Spring.Echo( #unitsToMove)
-
 		for i=1, #unitsToMove do
 
 			local currUid = unitsToMove[i]
