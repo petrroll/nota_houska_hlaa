@@ -122,14 +122,20 @@ return function(startPos, destPos, boolGridObj)
     local gridSizeX = #graphGrid
     local gridSizeY = #(graphGrid[1])
 
+    -- neccessary because due to drifting towers-bug the destination can actually sometimes be off the map
     if destXi > gridSizeX then destXi = gridSizeX end 
     if destYi > gridSizeY then destYi = gridSizeY end 
     if startXi > gridSizeX then startXi = gridSizeX end 
     if startYi > gridSizeY then startYi = gridSizeY end 
 
+    if destXi < 1 then destXi = 1 end 
+    if destYi < 1 then destYi = 1 end 
+    if startXi < 1 then startXi = 1 end 
+    if startYi < 1 then startYi = 1 end 
+
     local start = {x=startXi, y=startYi}
     local dest = {x=destXi, y=destYi}
-    
+
 
     -- The whole current distance and hight keeping in navGraph is an ugly hack to add
     -- ..some non-one distances support to BFS. I.e to add support for prefering certain
