@@ -1,5 +1,20 @@
 {
-	"additionalNodes": [],
+	"additionalNodes": [ {
+		"children": [],
+		"id": "IW2S3RQCyotj9mVRSTKowts4XajWX9Dc",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "unitsToMove",
+			"value": "transports"
+		}, {
+			"name": "path",
+			"value": "pathToUnits.dta"
+		}, {
+			"name": "scriptName",
+			"value": "nota_houska_hlaa.moveGroupAlongPath"
+		} ],
+		"scriptName": "nota_houska_hlaa.moveGroupAlongPath"
+	} ],
 	"additionalParameters": {
 		"root": {
 			"height": 188,
@@ -28,7 +43,7 @@
 			"height": 90,
 			"title": "untilFinishedRepeat",
 			"width": 208,
-			"x": 517,
+			"x": 518,
 			"y": 162
 		},
 		"22mzv3Y7ywsKiGU27vNa5rXftchnoVro": {
@@ -51,6 +66,13 @@
 			"width": 132,
 			"x": 1064,
 			"y": -84
+		},
+		"7kX1cdT7Zc19M0DbOXmkEhaXtVccQQYO": {
+			"height": 94,
+			"title": "dontLoadUsingDeadTransports",
+			"width": 409,
+			"x": 1379,
+			"y": 46
 		},
 		"CAO1te1JZS3Lb5fGloNJLJliGmE2RlLv": {
 			"height": 60,
@@ -84,8 +106,8 @@
 			"height": 92,
 			"title": "nota_houska_hlaa.moveGroupAlongPath",
 			"width": 342,
-			"x": 1359,
-			"y": 42
+			"x": 1366,
+			"y": -48
 		},
 		"Mb2Bi4q8OtKPeurseCb3bT5fJbiJ4L4Y": {
 			"height": 130,
@@ -161,7 +183,7 @@
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 312,
+			"x": 313,
 			"y": 44
 		},
 		"oCJXdr7e8dMAhr8vw8EnDysYAn8P1qrJ": {
@@ -175,7 +197,7 @@
 			"height": 60,
 			"title": "precomputePathsAndInit",
 			"width": 237,
-			"x": 493,
+			"x": 494,
 			"y": -64
 		},
 		"vB8H5IMY7zXFWh9jCuIGPyHrEqc7hFDF": {
@@ -277,19 +299,19 @@
 					"children": [ {
 						"children": [ {
 							"children": [],
-							"id": "IW2S3RQCyotj9mVRSTKowts4XajWX9Dc",
+							"id": "7kX1cdT7Zc19M0DbOXmkEhaXtVccQQYO",
 							"nodeType": "luaCommand",
 							"parameters": [ {
-								"name": "unitsToMove",
+								"name": "var",
 								"value": "transports"
 							}, {
-								"name": "path",
-								"value": "pathToUnits.dta"
+								"name": "value",
+								"value": "nota_houska_hlaa.FilterDestroyedUnits(transports)"
 							}, {
 								"name": "scriptName",
-								"value": "nota_houska_hlaa.moveGroupAlongPath"
+								"value": "store"
 							} ],
-							"scriptName": "nota_houska_hlaa.moveGroupAlongPath"
+							"scriptName": "store"
 						}, {
 							"children": [],
 							"id": "vB8H5IMY7zXFWh9jCuIGPyHrEqc7hFDF",
