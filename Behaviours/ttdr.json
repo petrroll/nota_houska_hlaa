@@ -25,8 +25,8 @@
 			"height": 90,
 			"title": "luaCondition",
 			"width": 194,
-			"x": 1339,
-			"y": 385
+			"x": 1409,
+			"y": 379
 		},
 		"45komPhaRThvIOEqxojzSaLFQYdcDcq8": {
 			"height": 94,
@@ -34,6 +34,20 @@
 			"width": 357,
 			"x": 885,
 			"y": -78
+		},
+		"4CbxGhaI1Ob3h21RYtVUJFK8T8oou4NK": {
+			"height": 60,
+			"title": "andGameAndWait",
+			"width": 198,
+			"x": 1712,
+			"y": 430
+		},
+		"4nHlMdSJHCSajzQZsv7m5R9AqTHAJkEU": {
+			"height": 72,
+			"title": "waitForeverMissionWon",
+			"width": 233,
+			"x": 1963,
+			"y": 476
 		},
 		"5VoreDPDUXQDJ8RmPOxyHNL1z0S4jSz7": {
 			"height": 60,
@@ -67,8 +81,8 @@
 			"height": 54,
 			"title": "success",
 			"width": 132,
-			"x": 1598,
-			"y": 380
+			"x": 1714,
+			"y": 369
 		},
 		"Hpl3PkwHPfLIbNuxa5eEFMpKZk1zmdMV": {
 			"height": 72,
@@ -100,10 +114,10 @@
 		},
 		"Vz3mFXhQyNSVcx1LuiLJkC81HqcNFisT": {
 			"height": 54,
-			"title": "nota_houska_hlaa.endGame",
+			"title": "finishGame",
 			"width": 265,
-			"x": 1597,
-			"y": 432
+			"x": 1955,
+			"y": 403
 		},
 		"XTylBUrSShxIETYCJSL6q1wVnlQjNQyo": {
 			"height": 94,
@@ -116,22 +130,22 @@
 			"height": 94,
 			"title": "storeFightingUnits",
 			"width": 336,
-			"x": 1330,
-			"y": 163
+			"x": 1424,
+			"y": 159
 		},
 		"c6jInncf4AYZW7DUq1IQjAJJYuLiCznb": {
 			"height": 60,
 			"title": "processStrandedUnits",
 			"width": 222,
-			"x": 1018,
-			"y": 175
+			"x": 1064,
+			"y": 229
 		},
 		"ghznwiduDwQKw5WytU3GHq3RmnpHgjnE": {
 			"height": 94,
 			"title": "aggregateStrandedUnits",
 			"width": 544,
-			"x": 1337,
-			"y": 574
+			"x": 1391,
+			"y": 658
 		},
 		"hNCFDLWojmt9cHf8jdV27vhabQZQ7bqr": {
 			"height": 54,
@@ -144,8 +158,8 @@
 			"height": 101,
 			"title": "filterStrandedUnits",
 			"width": 641,
-			"x": 1332,
-			"y": 262
+			"x": 1422,
+			"y": 264
 		},
 		"qltEZUpuLeZHK6YSanCnH3hwhsh6m0oW": {
 			"height": 60,
@@ -158,8 +172,8 @@
 			"height": 94,
 			"title": "storeStrandedUnitsLocs",
 			"width": 374,
-			"x": 1336,
-			"y": 485
+			"x": 1398,
+			"y": 567
 		},
 		"x8lfUvgZi0f2BrTd3uF0KzrQ0CnS0HfE": {
 			"height": 70,
@@ -272,14 +286,31 @@
 						"nodeType": "success",
 						"parameters": []
 					}, {
-						"children": [],
-						"id": "Vz3mFXhQyNSVcx1LuiLJkC81HqcNFisT",
-						"nodeType": "luaCommand",
-						"parameters": [ {
-							"name": "scriptName",
-							"value": "nota_houska_hlaa.endGame"
+						"children": [ {
+							"children": [],
+							"id": "Vz3mFXhQyNSVcx1LuiLJkC81HqcNFisT",
+							"nodeType": "luaCommand",
+							"parameters": [ {
+								"name": "scriptName",
+								"value": "nota_houska_hlaa.endGame"
+							} ],
+							"scriptName": "nota_houska_hlaa.endGame"
+						}, {
+							"children": [],
+							"id": "4nHlMdSJHCSajzQZsv7m5R9AqTHAJkEU",
+							"nodeType": "luaCommand",
+							"parameters": [ {
+								"name": "condition",
+								"value": "false"
+							}, {
+								"name": "scriptName",
+								"value": "waitUntil"
+							} ],
+							"scriptName": "waitUntil"
 						} ],
-						"scriptName": "nota_houska_hlaa.endGame"
+						"id": "4CbxGhaI1Ob3h21RYtVUJFK8T8oou4NK",
+						"nodeType": "sequence",
+						"parameters": []
 					} ],
 					"id": "2S3JCRjCwft78UDvAZXK2tU5tHWXGCEJ",
 					"nodeType": "luaCondition",
