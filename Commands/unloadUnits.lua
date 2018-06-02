@@ -50,11 +50,11 @@ function Run(self, units, parameter)
 	if not commands_issued then
 		for tKey, tId in pairs(transportIds) do
 			
+			-- hack to mitigate physics bug that causes unloaded towers to drift away
 			if safeUnload then
 				SpringGiveOrderToUnit(tId, CMD.MOVE, location:AsSpringVector(), modifier)
-				SpringGiveOrderToUnit(tId, CMD.TIMEWAIT, { 750 }, { "shift" })
-				SpringGiveOrderToUnit(tId, CMD.UNLOAD_UNITS, {location.x, location.y, location.z, 256+128}, { "shift" })		
-				SpringGiveOrderToUnit(tId, CMD.MOVE, location:AsSpringVector(), { "shift" })
+				SpringGiveOrderToUnit(tId, CMD.TIMEWAIT, { 750 }, CMD.OPT_SHIFT)
+				SpringGiveOrderToUnit(tId, CMD.UNLOAD_UNITS, {location.x, location.y, location.z, 256+128}, CMD.OPT_SHIFT)		
 			else
 				SpringGiveOrderToUnit(tId, CMD.UNLOAD_UNITS, {location.x, location.y, location.z, 100}, modifier)		
 			end
