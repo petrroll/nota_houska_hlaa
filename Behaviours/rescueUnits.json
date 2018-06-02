@@ -28,15 +28,15 @@
 			"height": 90,
 			"title": "untilFinishedRepeat",
 			"width": 208,
-			"x": 745,
+			"x": 746,
 			"y": 70
 		},
 		"22mzv3Y7ywsKiGU27vNa5rXftchnoVro": {
 			"height": 94,
 			"title": "storePathToUnits",
 			"width": 596,
-			"x": 1035,
-			"y": -280
+			"x": 1045,
+			"y": -348
 		},
 		"3IDRmAPOFe1d5V3klJRARBc5u0676JsE": {
 			"height": 92,
@@ -49,29 +49,29 @@
 			"height": 54,
 			"title": "success",
 			"width": 132,
-			"x": 1290,
-			"y": -176
+			"x": 1289,
+			"y": -248
 		},
 		"7kX1cdT7Zc19M0DbOXmkEhaXtVccQQYO": {
 			"height": 94,
 			"title": "dontLoadUsingDeadTransports",
-			"width": 409,
-			"x": 1605,
-			"y": -46
+			"width": 466,
+			"x": 1659,
+			"y": 31
 		},
 		"CAO1te1JZS3Lb5fGloNJLJliGmE2RlLv": {
 			"height": 60,
 			"title": "updateStillStrandedUnits",
 			"width": 237,
-			"x": 1364,
-			"y": 451
+			"x": 1349,
+			"y": 541
 		},
 		"FRikiiR1YtJx0oaJL5jZKmrWmwtNxMjB": {
 			"height": 90,
 			"title": "failIfNoPathToUnits",
 			"width": 204,
-			"x": 1039,
-			"y": -170
+			"x": 1047,
+			"y": -247
 		},
 		"G7O7dKL3PaNwpmNNXjgtE4DW1o9w9gJh": {
 			"height": 90,
@@ -91,127 +91,141 @@
 			"height": 92,
 			"title": "nota_houska_hlaa.moveGroupAlongPath",
 			"width": 342,
-			"x": 1607,
-			"y": -145
+			"x": 1666,
+			"y": -67
 		},
 		"IjjbrZlPwiT6Pc59WxHYpfZselvBLF3j": {
 			"height": 60,
 			"title": "repeat",
 			"width": 131,
-			"x": 781,
+			"x": 782,
 			"y": 766
 		},
 		"Mb2Bi4q8OtKPeurseCb3bT5fJbiJ4L4Y": {
 			"height": 130,
 			"title": "nota_houska_hlaa.unloadUnits",
 			"width": 277,
-			"x": 1599,
-			"y": 274
+			"x": 1657,
+			"y": 368
 		},
 		"MtEO9sMNhgiW9qzOMcjciZyYKt8hhOrM": {
 			"height": 54,
 			"title": "failure",
 			"width": 140,
-			"x": 1295,
-			"y": -122
+			"x": 1286,
+			"y": -191
 		},
 		"OcqZXI81KrWHpQNHCKR3lJxBqTjcWjmj": {
 			"height": 92,
 			"title": "initFinish",
 			"width": 137,
 			"x": 1048,
-			"y": -385
+			"y": -443
 		},
 		"Se5hpBT5JDehG9kVUxxuswuw9SLTQ5cL": {
 			"height": 60,
 			"title": "repeat",
 			"width": 131,
-			"x": 986,
+			"x": 988,
 			"y": 81
 		},
 		"XBkdLFXrtXlCSZb4eVZNsJbfqzlP5ALf": {
 			"height": 54,
 			"title": "success",
 			"width": 132,
-			"x": 990,
+			"x": 992,
 			"y": 151
 		},
 		"XJQtvHxEA0jmyrDyKucZba4wWdWd3fYQ": {
 			"height": 60,
 			"title": "evacRun",
 			"width": 143,
-			"x": 1370,
+			"x": 1371,
 			"y": 69
 		},
 		"bOMM3Un3T0mXBjMEyVduDnXj2QLxDGdY": {
 			"height": 94,
 			"title": "storeStillStrandedUids (parallel hack to filter out units as soon as they're saved -> in case they drift away)",
 			"width": 745,
-			"x": 948,
+			"x": 950,
 			"y": 805
 		},
 		"bWzfT2Om66GECHhrxhmnxZl2ITIzqRp2": {
 			"height": 94,
 			"title": "storeStillStrandedUids",
 			"width": 660,
-			"x": 1708,
-			"y": 518
+			"x": 1683,
+			"y": 591
+		},
+		"cVmp7UMfTemaKVsEgw5Z8PEcVUgovHJJ": {
+			"height": 94,
+			"title": "filterDeadTransports",
+			"width": 409,
+			"x": 1669,
+			"y": -269
 		},
 		"eN6wWkP4vTx7o8HP8bvf1VosaD2hhmz4": {
 			"height": 94,
 			"title": "filterDeadUnits",
 			"width": 429,
-			"x": 1712,
-			"y": 424
+			"x": 1686,
+			"y": 499
 		},
 		"iG3eTnzuGosTlc4LtbhDjrW9TskLxJWs": {
 			"height": 94,
 			"title": "nota_houska_hlaa.moveGroupAlongPath",
 			"width": 372,
-			"x": 1590,
-			"y": 184
+			"x": 1653,
+			"y": 264
 		},
 		"l3OHtJdKDxiwl3IOCyZjTxN7pATNcC7H": {
 			"height": 94,
 			"title": "storePathFromUnits",
 			"width": 397,
-			"x": 1045,
-			"y": -60
+			"x": 1034,
+			"y": -111
 		},
 		"lLBgQmICn9OLX4Ww2HCWW4BLPY0KRo5M": {
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 332,
+			"x": 333,
 			"y": 45
 		},
 		"nPsJAbPjXgDJO5pzCqMbPPTkdhvlwO6m": {
 			"height": 70,
 			"title": "parallel",
 			"width": 202,
-			"x": 515,
+			"x": 516,
 			"y": 77
 		},
 		"oCJXdr7e8dMAhr8vw8EnDysYAn8P1qrJ": {
 			"height": 60,
 			"title": "doEvacRun",
 			"width": 154,
-			"x": 1144,
+			"x": 1146,
 			"y": 81
 		},
 		"ui3Y6mcFxS7LHUKNxvS2MszstWTDeTom": {
 			"height": 60,
 			"title": "precomputePathsAndInit",
 			"width": 237,
-			"x": 721,
+			"x": 722,
 			"y": -156
 		},
 		"vB8H5IMY7zXFWh9jCuIGPyHrEqc7hFDF": {
 			"height": 130,
 			"title": "nota_houska_hlaa.loadUnits",
 			"width": 261,
-			"x": 1592,
-			"y": 53
+			"x": 1659,
+			"y": 128
+		},
+		"ykYRbhoBu0c4sJZuZq4BkqVSD3txXD28": {
+			"height": 94,
+			"title": "selectTransportersForThisMission",
+			"width": 803,
+			"x": 1668,
+			"y": -169
 		}
 	},
 	"roles": [ {
@@ -306,22 +320,7 @@
 						"children": [ {
 							"children": [ {
 								"children": [],
-								"id": "IW2S3RQCyotj9mVRSTKowts4XajWX9Dc",
-								"nodeType": "luaCommand",
-								"parameters": [ {
-									"name": "unitsToMove",
-									"value": "transports"
-								}, {
-									"name": "path",
-									"value": "pathToUnits.dta"
-								}, {
-									"name": "scriptName",
-									"value": "nota_houska_hlaa.moveGroupAlongPath"
-								} ],
-								"scriptName": "nota_houska_hlaa.moveGroupAlongPath"
-							}, {
-								"children": [],
-								"id": "7kX1cdT7Zc19M0DbOXmkEhaXtVccQQYO",
+								"id": "cVmp7UMfTemaKVsEgw5Z8PEcVUgovHJJ",
 								"nodeType": "luaCommand",
 								"parameters": [ {
 									"name": "var",
@@ -336,11 +335,56 @@
 								"scriptName": "store"
 							}, {
 								"children": [],
+								"id": "ykYRbhoBu0c4sJZuZq4BkqVSD3txXD28",
+								"nodeType": "luaCommand",
+								"parameters": [ {
+									"name": "var",
+									"value": "selectedTransports"
+								}, {
+									"name": "value",
+									"value": "nota_houska_hlaa.TakeFirstN(transports, (#strandedUIds) + 5)"
+								}, {
+									"name": "scriptName",
+									"value": "store"
+								} ],
+								"scriptName": "store"
+							}, {
+								"children": [],
+								"id": "IW2S3RQCyotj9mVRSTKowts4XajWX9Dc",
+								"nodeType": "luaCommand",
+								"parameters": [ {
+									"name": "unitsToMove",
+									"value": "selectedTransports"
+								}, {
+									"name": "path",
+									"value": "pathToUnits.dta"
+								}, {
+									"name": "scriptName",
+									"value": "nota_houska_hlaa.moveGroupAlongPath"
+								} ],
+								"scriptName": "nota_houska_hlaa.moveGroupAlongPath"
+							}, {
+								"children": [],
+								"id": "7kX1cdT7Zc19M0DbOXmkEhaXtVccQQYO",
+								"nodeType": "luaCommand",
+								"parameters": [ {
+									"name": "var",
+									"value": "selectedTransports"
+								}, {
+									"name": "value",
+									"value": "nota_houska_hlaa.FilterDestroyedUnits(selectedTransports)"
+								}, {
+									"name": "scriptName",
+									"value": "store"
+								} ],
+								"scriptName": "store"
+							}, {
+								"children": [],
 								"id": "vB8H5IMY7zXFWh9jCuIGPyHrEqc7hFDF",
 								"nodeType": "luaCommand",
 								"parameters": [ {
 									"name": "transporter",
-									"value": "transports"
+									"value": "selectedTransports"
 								}, {
 									"name": "unitsToLoad",
 									"value": "strandedUIds"
@@ -361,7 +405,7 @@
 								"nodeType": "luaCommand",
 								"parameters": [ {
 									"name": "unitsToMove",
-									"value": "transports"
+									"value": "selectedTransports"
 								}, {
 									"name": "path",
 									"value": "pathFromUnitsDta"
@@ -376,7 +420,7 @@
 								"nodeType": "luaCommand",
 								"parameters": [ {
 									"name": "transporter",
-									"value": "transports"
+									"value": "selectedTransports"
 								}, {
 									"name": "location",
 									"value": "evacLoc.center"
