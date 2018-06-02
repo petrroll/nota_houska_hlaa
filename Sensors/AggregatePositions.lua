@@ -22,6 +22,7 @@ VFS.Include(modules.attach.data.path .. modules.attach.data.head) -- attach lib 
 local SpringGetGroundHeight = Spring.GetGroundHeight 
 
 -- @description from each close neighborhood return exactly one location / {location, [location keys]} if richData == true
+-- fast implementation of one pass of k-means that expects no overlap between neighborhoods
 return function(locations, neighborhoodTreshold, richData)
 	neighborhoodTreshold = neighborhoodTreshold or 512
 	richData = richData or false
