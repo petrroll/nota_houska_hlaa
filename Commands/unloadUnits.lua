@@ -33,6 +33,7 @@ end
 
 SpringGiveOrderToUnit = Spring.GiveOrderToUnit
 SpringGetUnitCommands = Spring.GetUnitCommands
+SpringGetUnitIsTransporting = Spring.GetUnitIsTransporting
 
 commands_issued = false
 function Run(self, units, parameter)
@@ -51,8 +52,8 @@ function Run(self, units, parameter)
 			
 			if safeUnload then
 				SpringGiveOrderToUnit(tId, CMD.MOVE, location:AsSpringVector(), modifier)
-				SpringGiveOrderToUnit(tId, CMD.TIMEWAIT, { 250 }, { "shift" })
-				SpringGiveOrderToUnit(tId, CMD.UNLOAD_UNITS, {location.x, location.y, location.z, 150}, { "shift" })		
+				SpringGiveOrderToUnit(tId, CMD.TIMEWAIT, { 750 }, { "shift" })
+				SpringGiveOrderToUnit(tId, CMD.UNLOAD_UNITS, {location.x, location.y, location.z, 256+128}, { "shift" })		
 				SpringGiveOrderToUnit(tId, CMD.MOVE, location:AsSpringVector(), { "shift" })
 			else
 				SpringGiveOrderToUnit(tId, CMD.UNLOAD_UNITS, {location.x, location.y, location.z, 100}, modifier)		
@@ -65,7 +66,11 @@ function Run(self, units, parameter)
     end
 
 	for tKey, tId in pairs(transportIds) do	
-		if SpringGetUnitCommands(tId) ~= nil and #SpringGetUnitCommands(tId) > 0 then
+		local transUnits = SpringGetUnitIsTransporting(tId)
+		local cmdQ = SpringGetUnitCommands(tId)
+
+		-- running only if some command hasn't been finished & I'm still transporting untis 
+		if (transUnits ~= nil and #transUnits > 0) and (cmdQ ~= nil and #cmdQ > 0) then
 			return RUNNING
 		end
 	end	

@@ -35,6 +35,8 @@ end
 
 SpringGiveOrderToUnit = Spring.GiveOrderToUnit
 SpringGetUnitCommands = Spring.GetUnitCommands
+SpringGetUnitIsTransporting = Spring.GetUnitIsTransporting
+SpringGetUnitDefID = Spring.GetUnitDefID
 
 function getUnitsVecPocition(uid)
     local pointX, pointY, pointZ = Spring.GetUnitPosition(uid)
@@ -83,7 +85,14 @@ function Run(self, units, parameter)
     end
 
     for tKey, tId in pairs(transportIds) do	
-        		if SpringGetUnitCommands(tId) ~= nil and #SpringGetUnitCommands(tId) > 0 then
+		local transUnits = SpringGetUnitIsTransporting(tId)
+        local cmdQ = SpringGetUnitCommands(tId)
+
+        local unitDefId = SpringGetUnitDefID(tId)
+        local capacity = 0
+        if unitDefId ~= nil then local capacity = UnitDefs[unitDefId].transportCapacity end
+
+        if (transUnits ~= nil and #transUnits < capacity) and (cmdQ ~= nil and #cmdQ > 0) then
             return RUNNING
         end
     end
@@ -94,4 +103,5 @@ end
 
 function Reset(self)
     firstRun = true
+    unitsToTransport = {}
 end
